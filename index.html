@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Ayush Mishra · Graphic Designer & Developer</title>
+  <meta name="description" content="Ayush Mishra — graphic designer and developer. JavaScript, CSS, C++, Docker, Linux. Working with BrandHeist, freelance clients and an SMM agency in Hyderabad." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..900;1,300..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <span class="loader__count" id="loaderCount">0%</span>
+  </div>
+
+  <!-- Fluid gradient background (WebGL) -->
+  <canvas id="fluid" class="fluid" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="guides" aria-hidden="true"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label" id="cursorLabel">View</span></div>
+
+  <!-- Scroll progress -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#top" class="nav__logo" aria-label="Home">AM<sup>®</sup></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work" class="roll" data-roll="Work">Work</a>
+      <a href="#skills" class="roll" data-roll="Skills+">Skills+</a>
+      <a href="#about" class="roll" data-roll="About">About</a>
+      <a href="resume.html" class="roll" data-roll="Resume">Resume</a>
+    </nav>
+    <div class="nav__right">
+      <button class="theme" id="themeToggle" aria-label="Toggle colour theme">
+        <svg class="theme__sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></g></svg>
+        <svg class="theme__moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1Z"/></svg>
+      </button>
+      <a href="#contact" class="btn btn--pill magnetic">Let’s talk <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <p class="hero__eyebrow mono reveal">Portfolio — 2026 / Hyderabad, IN</p>
+      <h1 class="hero__name" aria-label="Ayush Mishra">
+        <span class="split" data-split>AYUSH</span>
+        <span class="split split--right" data-split>MISHRA</span>
+      </h1>
+      <div class="hero__row">
+        <p class="hero__tag reveal">
+          From <em>pixels</em> to <em>production</em> —<br />
+          designing brands &amp; shipping the code behind them.
+        </p>
+        <div class="hero__meta reveal">
+          <p>Graphic designer shaping identities, social systems &amp; campaigns</p>
+          <p>Developer comfortable from CSS all the way down to Linux &amp; Docker</p>
+          <a href="resume.html" class="btn btn--solid magnetic">View resume <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll mono" aria-label="Scroll down">Scroll ↓</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <p class="label mono">(01) About</p>
+      <p class="about__text" data-words>
+        I work where design meets engineering. By day I craft brand visuals, social
+        content and campaign creatives for agencies and clients; by night I write
+        JavaScript, tune CSS, dabble in C++ and ship things inside Docker containers
+        on Linux. The result: designs that are not only beautiful, but buildable.
+      </p>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" aria-label="At a glance">
+      <div class="stat reveal"><span class="stat__num" data-count="3">0</span><span class="stat__plus">+</span><p class="stat__label">Studios &amp; agencies<br />worked with</p></div>
+      <div class="stat reveal"><span class="stat__num" data-count="6">0</span><p class="stat__label">Core skills across<br />design &amp; dev</p></div>
+      <div class="stat reveal"><span class="stat__num" data-count="1">0</span><p class="stat__label">City base —<br />Hyderabad, India</p></div>
+      <div class="stat reveal"><span class="stat__num" data-count="100">0</span><span class="stat__plus">%</span><p class="stat__label">Hands-on, from<br />brief to delivery</p></div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <div class="section-head">
+        <h2 class="h2"><em>Skills</em>+ for better digital work</h2>
+        <p class="section-head__copy">Six disciplines, one person on the hook — from the first moodboard to the final deploy.</p>
+      </div>
+      <ul class="skill-list">
+        <li class="skill" data-cursor="Design"><span class="skill__idx mono">01</span><span class="skill__name roll-big" data-roll="Graphic Design">Graphic Design</span><span class="skill__desc">Brand identity, social creatives, posters, campaign systems</span></li>
+        <li class="skill" data-cursor="JS"><span class="skill__idx mono">02</span><span class="skill__name roll-big" data-roll="JavaScript">JavaScript</span><span class="skill__desc">ES modules, DOM, interactions, WebGL-driven UI</span></li>
+        <li class="skill" data-cursor="CSS"><span class="skill__idx mono">03</span><span class="skill__name roll-big" data-roll="CSS">CSS</span><span class="skill__desc">Layout, motion, responsive &amp; themeable design systems</span></li>
+        <li class="skill" data-cursor="C++"><span class="skill__idx mono">04</span><span class="skill__name roll-big" data-roll="C++">C++</span><span class="skill__desc">Problem solving, data structures, performance thinking</span></li>
+        <li class="skill" data-cursor="Ship"><span class="skill__idx mono">05</span><span class="skill__name roll-big" data-roll="Docker">Docker</span><span class="skill__desc">Containerised builds, reproducible dev environments</span></li>
+        <li class="skill" data-cursor="$_"><span class="skill__idx mono">06</span><span class="skill__name roll-big" data-roll="Linux">Linux</span><span class="skill__desc">Shell, servers, tooling and everyday command-line work</span></li>
+      </ul>
+    </section>
+
+    <!-- WORK / EXPERIENCE -->
+    <section class="work" id="work">
+      <div class="section-head">
+        <h2 class="h2">Who I <em>work</em> with</h2>
+        <p class="section-head__copy">Agency teams, independent clients and social-first brands.</p>
+      </div>
+      <div class="cards">
+        <article class="card tilt" data-cursor="View">
+          <div class="card__visual card__visual--a"><span>BH</span></div>
+          <div class="card__body">
+            <p class="card__kicker mono">Agency</p>
+            <h3 class="card__title">BrandHeist</h3>
+            <p class="card__text">Graphic design for a digital marketing agency — brand visuals, social creatives and campaign assets for multiple clients.</p>
+          </div>
+        </article>
+        <article class="card tilt" data-cursor="View">
+          <div class="card__visual card__visual--b"><span>SMM</span></div>
+          <div class="card__body">
+            <p class="card__kicker mono">Social media agency · Hyderabad</p>
+            <h3 class="card__title">SMM Agency</h3>
+            <p class="card__text">Content design for social media marketing — post templates, reels covers, ad creatives and brand-consistent feeds.</p>
+          </div>
+        </article>
+        <article class="card tilt" data-cursor="View">
+          <div class="card__visual card__visual--c"><span>FL</span></div>
+          <div class="card__body">
+            <p class="card__kicker mono">Independent</p>
+            <h3 class="card__title">Freelance</h3>
+            <p class="card__text">Logos, identities, landing pages and front-end builds for founders and small businesses — design and code, end to end.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <h2 class="cta__title">
+        <span class="split" data-split>Want to see</span>
+        <span class="split" data-split>how I <em>build</em></span>
+        <span class="split" data-split>brands?</span>
+      </h2>
+      <a href="resume.html" class="cta__btn magnetic" data-cursor="Open">Download resume <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Graphic Design</span><i>✦</i><span>JavaScript</span><i>✦</i><span>CSS</span><i>✦</i><span>C++</span><i>✦</i><span>Docker</span><i>✦</i><span>Linux</span><i>✦</i><span>BrandHeist</span><i>✦</i><span>Freelance</span><i>✦</i><span>Hyderabad</span><i>✦</i>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <h2 class="footer__title">Get in <em>touch</em></h2>
+    <p class="footer__copy">I design things that move people — and write the code that ships them. Prefer to write? Send a note.</p>
+    <!-- TODO: replace with your real email and profile links -->
+    <a class="btn btn--solid btn--xl magnetic" href="mailto:hello@ayushmishra.com">Contact <span aria-hidden="true">↗</span></a>
+    <div class="footer__links">
+      <a href="#" class="roll" data-roll="LinkedIn">LinkedIn</a>
+      <a href="#" class="roll" data-roll="Behance">Behance</a>
+      <a href="#" class="roll" data-roll="GitHub">GitHub</a>
+      <a href="#" class="roll" data-roll="Instagram">Instagram</a>
+    </div>
+    <div class="footer__bottom mono">
+      <span>©2026 Ayush Mishra — All rights reserved</span>
+      <a href="#top" class="footer__up" aria-label="Back to top">↑</a>
+    </div>
+    <p class="footer__giant" aria-hidden="true">AYUSH MISHRA</p>
+  </footer>
+</body>
+</html>

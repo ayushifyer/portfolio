@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Ayush Mishra · Resume</title>
+  <meta name="description" content="Resume of Ayush Mishra — graphic designer and developer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..900;1,300..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="resume.css" />
+  <script type="module" src="resume.js"></script>
+</head>
+<body>
+  <canvas id="fluid" class="fluid" aria-hidden="true"></canvas>
+
+  <!-- Toolbar: hidden when printing -->
+  <header class="toolbar no-print">
+    <a href="index.html" class="toolbar__back">← Back to portfolio</a>
+    <div class="toolbar__actions">
+      <button class="theme" id="themeToggle" aria-label="Toggle colour theme">◐</button>
+      <button class="btn" id="downloadBtn">Download PDF <span aria-hidden="true">↓</span></button>
+    </div>
+  </header>
+
+  <!--
+    HOW DOWNLOAD WORKS
+    1. If you drop a file named "Ayush-Mishra-Resume.pdf" next to this page,
+       the button downloads that exact file.
+    2. Otherwise it opens the print dialog, pre-styled for A4 —
+       choose "Save as PDF" and you get a clean one-page resume.
+  -->
+
+  <main class="sheet" id="resume">
+    <section class="head">
+      <div>
+        <h1 class="name">AYUSH<br />MISHRA</h1>
+        <p class="role">Graphic Designer <em>&amp;</em> Developer</p>
+      </div>
+      <!-- TODO: replace with your real contact details -->
+      <ul class="contact">
+        <li>Hyderabad, India</li>
+        <li><a href="mailto:hello@ayushmishra.com">hello@ayushmishra.com</a></li>
+        <li><a href="tel:+910000000000">+91 00000 00000</a></li>
+        <li><a href="https://linkedin.com/in/">linkedin.com/in/ayushmishra</a></li>
+        <li><a href="https://behance.net/">behance.net/ayushmishra</a></li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2 class="block__title">Profile</h2>
+      <p class="summary">
+        Graphic designer and developer working across brand identity, social media creatives and
+        front-end builds. Comfortable taking a project from moodboard to production — designing the
+        visuals, then writing the JavaScript and CSS that bring them to life, with a working knowledge
+        of C++, Docker and Linux.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2 class="block__title">Experience</h2>
+
+      <article class="job">
+        <div class="job__head">
+          <h3>Graphic Designer — <em>BrandHeist</em></h3>
+          <span class="job__meta">Digital marketing agency</span>
+        </div>
+        <ul>
+          <li>Design brand visuals, social media creatives and campaign assets across multiple client accounts.</li>
+          <li>Keep every deliverable on-brand while adapting to each client’s platform and audience.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job__head">
+          <h3>Graphic Designer — <em>SMM Agency</em></h3>
+          <span class="job__meta">Social media marketing · Hyderabad</span>
+        </div>
+        <ul>
+          <li>Create post templates, reel covers and ad creatives for social-first brands.</li>
+          <li>Build consistent, scroll-stopping feeds aligned to each brand’s identity.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job__head">
+          <h3>Freelance Designer &amp; Developer</h3>
+          <span class="job__meta">Independent</span>
+        </div>
+        <ul>
+          <li>Logos, identities and landing pages for founders and small businesses.</li>
+          <li>Design-to-code delivery: HTML, CSS and JavaScript front-ends built from my own designs.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="cols">
+      <div class="block">
+        <h2 class="block__title">Skills</h2>
+        <ul class="tags">
+          <li>Graphic Design</li><li>Brand Identity</li><li>Social Media Creatives</li>
+          <li>JavaScript</li><li>CSS</li><li>HTML</li><li>C++</li><li>Docker</li><li>Linux</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h2 class="block__title">Education</h2>
+        <!-- TODO: fill in your education -->
+        <p class="edu"><strong>Your degree</strong><br />Institute name · Year</p>
+      </div>
+    </section>
+
+    <footer class="sheet__foot">
+      <span>ayushmishra — resume</span>
+      <span>Updated 2026</span>
+    </footer>
+  </main>
+</body>
+</html>
